@@ -6,9 +6,9 @@ AngularJS extends HTML with ng-directives
 
 _Example_
 
-_ng-app_ : 애플리케이션에 대한 정의
-_ng-model_ : HTML안에서 일어나는 input,select,textarea등의 컨트롤들의 value들을 저장해준다.
-_ng-bind_ : _ng-model_ 값을 html상에 출력해준다.
+_ng-app_ : 애플리케이션에 대한 정의  
+_ng-model_ : HTML안에서 일어나는 input,select,textarea등의 컨트롤들의 value들을 저장해준다.  
+_ng-bind_ : _ng-model_ 값을 html상에 출력해준다.  
 
 ```
 <!DOCTYPE html>
