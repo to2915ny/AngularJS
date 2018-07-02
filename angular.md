@@ -73,12 +73,12 @@ _JavaScript Expression_ 과 비슷한성질을 가지고있다.
 ```
 
 
-## ng-controller
+## 모듈과 컨트롤러
 
 AngularJs의 ***module*** 은 애플리케이션을 정의한다.
-Angularjs의 ***controller*** 는 애플리케이션의 콘트롤들을 정의한다.  
+Angularjs의 ***controller*** 는 애플리케이션의 컨트롤들을 정의한다.  
 
-***ng-app*** 은 애플리케이션을 정의해주고 ***ng-controller*** 는 애플리케이션의 콘트롤들을 정의한다.  
+***ng-app*** 은 애플리케이션을 정의해주고 ***ng-controller*** 는 애플리케이션의 컨트롤들을 정의한다.  
 
 ```
 <div ng-app="myApp" ng-controller="myCtrl">
@@ -98,5 +98,13 @@ app.controller('myCtrl', function($scope) {
 });
 </script>
 ```
+모듈은 AngularJS function인 angular.module을 이용해 만들어진다.  
+angular.module('myApp',[]) myApp은 애플리케이션이 실행될 해당 HTML을 가르킨다.  
 
-위에 div 태그안에 ng-app 은 myApp ng-controller는 myCtrl로 정의되어있다. firstName과 lastName
+위에 div 태그안에 ng-app 은 myApp ng-controller는 myCtrl로 정의되어있다.  
+app.controller('myCtrl',function($scope){...}
+myCtrl parameter는 애플리케이션이 실행될 해당 HTML을 가르킨다.
+
+[https://www.w3schools.com/angular/angular_controllers.asp](클릭)
+
+Filter나 스코프등등 예제들이많으니 소스코드들을 참조하자.
