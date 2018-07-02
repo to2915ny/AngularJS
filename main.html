@@ -3,7 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-<div ng-app="">
+<div ng-app="myApp" ng-controller="myCtrl">
 
 <p>Input something in the input box:</p>
 <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
@@ -11,7 +11,22 @@
 
 <p ng-init="firstname='john'">Hello {{firstname}} </p>
 
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
 </div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+
 
 </body>
 </html>
