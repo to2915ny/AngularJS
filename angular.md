@@ -105,7 +105,7 @@ angular.module('myApp',[]) myApp은 애플리케이션이 실행될 해당 HTML�
 app.controller('myCtrl',function($scope){...}
 myCtrl parameter는 애플리케이션이 실행될 해당 HTML을 가르킨다.
 
-영어를 어느정도한다면 이사이트해서 다배울수있다
+영어를 어느정도한다면 이 site에서 다배울수있다
 [클릭!](https://www.w3schools.com/angular/default.asp)  
 
 Filter나 스코프등등 예제들이많으니 소스코드들을 참조하자.
