@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html >
+<head>
+
+  <link rel="stylesheet" type="text/css" href="landing-page.css">
+</head>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body ng-app="myApp"  >
 
@@ -9,8 +14,9 @@
 
   <p ><ul>
     <li ng-repeat="x in students | filter:name | orderBy:'city'">{{x}}<span ng-click='removeItem($index)'> x</span> </li>
+    <!--x 를 누르면 removieItem function이 trigger 된다. parameter로 index값을 보내준다.-->
   </ul>
-  <input type='text' ng-model='add'><button ng-click='addObject()'>Add Student!</button>
+  <input type='text' ng-model='add'><button ng-click='addObject()'>Add Student!</button> <!--Add Student button을 누르면 addObject function이 trigger 된다.-->
    </p>
 
 
@@ -26,13 +32,12 @@ var app = angular.module("myApp",[]);
       'Seungyong Lee'
     ];
     $scope.addObject = function(){
-      $scope.students.push($scope.add);
+      $scope.students.push($scope.add);//ng-model 'add' 에들어온 값을 students array에 (push)더해라
     }
     $scope.removeItem = function(x){
-      $scope.students.splice(x,1);
+      $scope.students.splice(x,1);//x위치 i.e index값에 있는 1개의값을 delete(splice)하라
     }
   });
-
 
 </script>
 </body>
