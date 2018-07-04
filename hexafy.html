@@ -22,7 +22,7 @@ app.service('hexafy', function() {
     }
 });
 app.controller('myCtrl', function($scope, hexafy) {
-$scope.value=function(){
+$scope.value=function(){//function안에 서비스를 부르자.
   $scope.hex = hexafy.myFunc($scope.num);
   }
 });
