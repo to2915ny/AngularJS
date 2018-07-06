@@ -2,27 +2,30 @@
 <html >
 <head>
 
-  <link rel="stylesheet" type="text/css" href="landing-page.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+  <link rel="stylesheet" type="text/css" href="search.css" />
 </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body ng-app="myApp"  >
 
 <div ng-controller='myCtrl'>
   <p>Name: <input type="text" ng-model="name"></p>
   <!--<p ng-bind="name"></p>-->
+<form ng-submit="addObject()">
+
 
   <p ><ul>
-    <li ng-repeat="x in students | filter:name | orderBy:'city'">{{x}}<span ng-click='removeItem($index)'> x</span> </li>
+    <li class="task-item" ng-repeat="x in students | filter:name | orderBy:'city'">{{x}}<span class="done" ng-click='removeItem($index)'> x</span> </li>
     <!--x 를 누르면 removieItem function이 trigger 된다. parameter로 index값을 보내준다.-->
   </ul>
-  <input type='text' ng-model='add'><button ng-click='addObject()'>Add Student!</button> <!--Add Student button을 누르면 addObject function이 trigger 된다.-->
+  <input type='text' ng-model='add'><button type="submit">Add Student!</button> <!--Add Student button을 누르면 addObject function이 trigger 된다.-->
    </p>
-
+</form>
 
 </div>
 <script>
-var app = angular.module("myApp",[]);
+var app = angular.module("myApp",['ngAnimate']);
 
   app.controller('myCtrl',function($scope){
     $scope.students=[
